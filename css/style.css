@@ -1,0 +1,18 @@
+#gallery img {
+  display: flex;
+  width: 40%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
