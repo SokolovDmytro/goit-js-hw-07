@@ -69,7 +69,6 @@ images.forEach(img => {
     const alt = img.alt;
     console.log(alt);
     gallery += `<img src="${src}" alt="${alt}" class ="img"/>`;
-    return gallery;
 });
 
 document.querySelector('#gallery').insertAdjacentHTML('afterbegin', gallery);
@@ -83,21 +82,18 @@ console.log('================task-04=====================')
 // Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
 
 let counterValue = 0;
+const valueSpan = document.querySelector('#value')
 
 function increment() {
     counterValue += 1;
-    document.querySelector('#value').textContent = counterValue;
+    valueSpan.textContent = counterValue;
 }
-
 function decrement() {
     counterValue -= 1;
-    document.querySelector('#value').textContent = counterValue;
+    valueSpan.textContent = counterValue;
 }
-
 const incrementButton = document.querySelector('#counter button[data-action="increment"]', );
 const decrementButton = document.querySelector('#counter button[data-action="decrement"]', );
-// console.log(incrementBtn);
-// console.log(decrementBtn);
 
 incrementButton.addEventListener('click', increment);
 decrementButton.addEventListener('click', decrement);
